@@ -75,7 +75,7 @@ int main(void)
       if (columns_active[i] == 1)
       {
         /* Draw a random character at this column's current row. */
-        int char_index = get_rand_in_range(0, 2);
+        int char_index = get_rand_in_range(0, total_chars);
         mvprintw(columns_row[i], i, "%c", chars[char_index]);
       }
       else
