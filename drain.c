@@ -6,6 +6,8 @@
 
 int main(void)
 {
+  srand(time(NULL));
+
   int x = 0, y = 0;
   int max_x = 0, max_y = 0;
 
@@ -36,25 +38,44 @@ int main(void)
     {
       if (columns_row[i] == -1)
       {
-        columns_row[i] = (rand() % max_y + 0);
-        columns_active[i] = (rand() % 1 + 0);
+        columns_row[i] = get_rand_in_range(0, max_y);
+        columns_active[i] = get_rand_in_range(0, 1);
       }
     }
 
     for (i = 0; i < max_x; i++)
     {
-      mvprintw(columns_row[i], i, "o");
+      if (columns_active[i] == 1)
+      {
+        mvprintw(columns_row[i], i, "o");
+      }
+      else
+      {
+        mvprintw(columns_row[i], i, " ");
+      }
+
       columns_row[i]++;
 
       if (columns_row[i] >= max_y)
       {
         columns_row[i] = -1;
       }
+
+      if (get_rand_in_range(0, 1000) == 0)
+      {
+        columns_active[i] = (columns_active[i] == 0) ? 1 : 0;
+      }
     }
+
     usleep(ROW_DELAY);
     refresh();
   }
 
   endwin();
   return 0;
+}
+
+int get_rand_in_range(int min, int max)
+{
+  return (rand() % ((max + 1) - min) + min);
 }
