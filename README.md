@@ -22,6 +22,8 @@ Run:
 ./drain
 ```
 
+Ctrl+C to exit.
+
 Only tested on Linux, but should compile on other platforms as long as
 the requirements are met.
 
