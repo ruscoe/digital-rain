@@ -3,6 +3,8 @@
 A C program that loosely emulates the "[digital rain](http://en.wikipedia.org/wiki/Matrix_digital_rain)"
 effect from [The Matrix](http://en.wikipedia.org/wiki/The_Matrix).
 
+![Digital-Rain screen shot](http://ruscoe.org/assets/images/programs/digital-rain.png)
+
 ## Requirements
 
 * [gcc](http://gcc.gnu.org/) or any comparable C compiler.
