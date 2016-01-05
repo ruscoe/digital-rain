@@ -4,6 +4,7 @@ A C program that loosely emulates the "[digital rain](http://en.wikipedia.org/wi
 effect from [The Matrix](http://en.wikipedia.org/wiki/The_Matrix).
 
 ![Digital-Rain screen shot](http://ruscoe.org/assets/images/programs/digital-rain.png)
+
 [Animated gif preview](http://ruscoe.org/assets/images/programs/digital-rain.gif)
 
 ## Requirements
