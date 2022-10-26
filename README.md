@@ -3,7 +3,7 @@
 A C program that loosely emulates the "[digital rain](http://en.wikipedia.org/wiki/Matrix_digital_rain)"
 effect from [The Matrix](http://en.wikipedia.org/wiki/The_Matrix).
 
-![Digital-Rain screen shot](https://ruscoe.org/assets/images/misc/github/digital-rain.png)
+![digital-rain](https://user-images.githubusercontent.com/87952/198073462-18d68301-dd48-4bf1-b7d0-d93e7e8900e3.png)
 
 [Animated gif preview](https://ruscoe.org/assets/images/misc/github/digital-rain.gif)
 
