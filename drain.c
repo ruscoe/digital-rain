@@ -7,11 +7,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ncurses.h>
+#include <time.h>
 
-/* Time between row updates in microseconds.
+/* Time between row updates in nanoseconds.
    Controls the speed of the digital rain effect.
 */
-#define ROW_DELAY 40000
+#define ROW_DELAY 40000000
+
+/**
+ * Gets a random integer within a given range.
+ *
+ * @param int min The low-end of the range.
+ * @param int max The high-end of the range.
+ *
+ * @return int The random integer.
+ */
+int get_rand_in_range(int min, int max)
+{
+  return (rand() % ((max + 1) - min) + min);
+}
 
 int main(void)
 {
@@ -99,23 +113,11 @@ int main(void)
       }
     }
 
-    usleep(ROW_DELAY);
+    struct timespec delay = {0, ROW_DELAY};
+    nanosleep(&delay, NULL);
     refresh();
   }
 
   endwin();
   return 0;
-}
-
-/**
- * Gets a random integer within a given range.
- *
- * @param int min The low-end of the range.
- * @param int max The high-end of the range.
- *
- * @return int The random integer.
- */
-int get_rand_in_range(int min, int max)
-{
-  return (rand() % ((max + 1) - min) + min);
 }
